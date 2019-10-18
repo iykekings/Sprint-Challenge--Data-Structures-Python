@@ -11,4 +11,4 @@ class RingBuffer:
     self.current += 1
 
   def get(self):
-    return self.storage
+    return list(filter(None ,self.storage))
