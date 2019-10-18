@@ -1,5 +1,5 @@
 class RingBuffer:
-  def __init__(self, capacity):
+  def __init__(self, capacity: int):
     self.capacity = capacity
     self.current = 0
     self.storage = [None]*capacity
@@ -12,3 +12,13 @@ class RingBuffer:
 
   def get(self):
     return list(filter(None ,self.storage))
+
+
+buffer = RingBuffer(3)
+
+buffer.append('a')
+print(buffer.get())
+buffer.append('b')
+print(buffer.get())
+buffer.append('c')
+print(buffer.get())
