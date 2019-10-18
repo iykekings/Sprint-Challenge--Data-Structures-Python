@@ -12,13 +12,3 @@ class RingBuffer:
 
   def get(self):
     return list(filter(None ,self.storage))
-
-
-buffer = RingBuffer(3)
-
-buffer.append('a')
-print(buffer.get())
-buffer.append('b')
-print(buffer.get())
-buffer.append('c')
-print(buffer.get())
